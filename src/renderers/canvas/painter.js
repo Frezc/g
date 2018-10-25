@@ -27,6 +27,7 @@ class Painter {
     }
     const canvasId = Util.uniqueId('canvas_');
     const canvasDom = Util.createDom('<canvas id="' + canvasId + '"></canvas>');
+    Util.modifyCSS(canvasDom, { position: 'absolute' });
     dom.appendChild(canvasDom);
     this.type = 'canvas';
     this.canvas = canvasDom;
